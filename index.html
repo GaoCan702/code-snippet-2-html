@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link id="highlightTheme" rel="stylesheet" href="/highlightjs-styles/default.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Snippet</title>
+  <script type="module" src="/main.js"></script>
+</head>
+
+<body>
+
+  <div id='container' class="container mx-auto px-4">
+    <div class="flex-col justify-start items-center flex-grow">
+      <div class="m-2">
+        <p>converts your code snippets into pretty-printed HTML format, easily embeddable into blog posts, emails and
+          websites.</p>
+
+        <p>Just copy the source code to the left pane, select the language and the color scheme, and click "Highlight!".
+          The HTML from the right pane can now be pasted to your blog or email, no external CSS or Javascript files are
+          required.
+        </p>
+      </div>
+      <div class="flex m-2">
+        <select id="languageSelector"></select>
+        <select id="themeSelector">
+          <option value="default" selected>default</option>
+          <option value="a11y-dark">a11y-dark</option>
+        </select>
+
+        <div class="self-end">
+          <label><input type="radio" name="mode" value="preview" checked> 预览</label>
+          <label><input type="radio" name="mode" value="raw"> 原始字符串</label>
+          <button id="copyButton" class="border">复制</button>
+        </div>
+      </div>
+      <div class="flex ">
+
+        <textarea id="codeInput" class="flex-1 border-2 border-solid border-black m-2 min-h-[400px]" value=""
+          placeholder="Paste your code here...">
+        </textarea>
+        <pre id="outputArea" class="flex-1 border-2 border-solid border-black m-2"></pre>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>
